@@ -444,6 +444,9 @@ public class ImagePickerModule extends ReactContextBaseJavaModule implements Act
     int initialWidth = options.outWidth;
     int initialHeight = options.outHeight;
 
+    response.putString("uriF", uri.toString());
+    response.putString("pathF", realPath);
+
     // don't create a new file if contraint are respected
     if (((initialWidth < maxWidth && maxWidth > 0) || maxWidth == 0)
             && ((initialHeight < maxHeight && maxHeight > 0) || maxHeight == 0)
